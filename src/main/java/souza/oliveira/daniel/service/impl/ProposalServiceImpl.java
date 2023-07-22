@@ -3,6 +3,7 @@ package souza.oliveira.daniel.service.impl;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
+import org.eclipse.microprofile.opentracing.Traced;
 import souza.oliveira.daniel.dto.ProposalDTO;
 import souza.oliveira.daniel.dto.ProposalDetailsDTO;
 import souza.oliveira.daniel.entity.ProposalEntity;
@@ -11,6 +12,7 @@ import souza.oliveira.daniel.repository.ProposalRepository;
 import souza.oliveira.daniel.service.ProposalService;
 
 @ApplicationScoped
+@Traced
 public class ProposalServiceImpl implements ProposalService {
 
     private final ProposalRepository proposalRepository;
